@@ -1,15 +1,16 @@
 spring:
- datasource:
+  datasource:
     url: jdbc:mysql://127.0.0.1:3306/at?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
-jpa:
+srping:
+  jpa:
     database: mysql
     show-sql: true
     hibernate:
       naming:
-        implicit-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
 server:
   port: 8088
 

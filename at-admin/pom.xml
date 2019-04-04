@@ -25,9 +25,21 @@
         </dependency>
         <dependency>
             <groupId>com.at</groupId>
+            <artifactId>at-pojo</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.at</groupId>
             <artifactId>at-dao</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.at</groupId>
+            <artifactId>at-services</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+
 
 
 
@@ -38,12 +50,12 @@
             <version>8.0.15</version>
         </dependency>
 
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
