@@ -18,20 +18,18 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping(value = "/list",method = RequestMethod.GET)
-    public List<UserEntity> list(){
+    public List<UserEntity> list() throws Exception{
         return userService.list();
     }
 
     @RequestMapping(value = "/save",method = RequestMethod.GET)
-    public UserEntity save(UserEntity userEntity){
+    public UserEntity save(UserEntity userEntity)throws Exception{
         return userService.save(userEntity);
     }
-    /*@RequestMapping(value = "/delete",method = RequestMethod.GET)
-    public List<UserEntity> delete(Long id){
-        userService.deleteById(id);
-
-        return userService.findAll();
-    }*/
+    @RequestMapping(value = "/delete",method = RequestMethod.GET)
+    public List<UserEntity> delete(Long id)throws Exception{
+        return userService.deleteById(id);
+    }
 
 
 

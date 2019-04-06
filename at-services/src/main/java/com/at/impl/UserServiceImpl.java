@@ -11,16 +11,22 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-      @Autowired
-      private UserJPA userJPA;
+    @Autowired
+    private UserJPA userJPA;
 
-      public UserEntity save(UserEntity userEntity){
+    public UserEntity save(UserEntity userEntity) {
 
         return userJPA.save(userEntity);
-      }
-      public List<UserEntity> list(){
+    }
 
-              return userJPA.findAll();
-        }
+    public List<UserEntity> deleteById(Long id) {
+        userJPA.deleteById(id);
+        return userJPA.findAll();
+    }
 
-   }
+    public List<UserEntity> list() {
+
+        return userJPA.findAll();
+    }
+
+}
